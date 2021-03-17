@@ -1,6 +1,6 @@
 FROM alpine:3.13
 
-RUN apk add --no-cache kea-dhcp4 kea-admin postgresql-client jq \
+RUN apk add --no-cache kea-dhcp4 kea-admin kea-ctrl-agent postgresql-client jq \
     && mkdir -p /run/kea
 
 COPY scripts/start.sh /start.sh
